@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CareTrust | Healthcare Innovators</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f8fafc; --text: #0f172a; --text-muted: #64748b; --primary: #3b82f6; --surface: #ffffff; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+nav { display: flex; justify-content: space-between; padding: 1.5rem 5%; background: rgba(255,255,255,0.7); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(0,0,0,0.05); align-items: center; }
+.logo { font-size: 1.5rem; font-weight: 600; letter-spacing: -0.04em; }
+.logo span { color: var(--primary); }
+.hero { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; padding: 6rem 5%; align-items: center; max-width: 1400px; margin: 0 auto; }
+.hero-text h1 { font-size: 4rem; font-weight: 600; line-height: 1.1; letter-spacing: -0.04em; margin-bottom: 1.5rem; }
+.hero-text p { font-size: 1.125rem; color: var(--text-muted); line-height: 1.6; margin-bottom: 2.5rem; max-width: 480px; }
+.btn { padding: 1rem 2rem; background: var(--primary); color: white; border: none; border-radius: 99px; font-weight: 500; font-size: 1rem; cursor: pointer; transition: transform 0.2s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.2s; box-shadow: 0 4px 14px rgba(59,130,246,0.3); }
+.btn:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(59,130,246,0.4); }
+.hero-img { width: 100%; border-radius: 32px; box-shadow: 0 24px 48px rgba(0,0,0,0.08); overflow: hidden; position: relative; }
+.hero-img img { width: 100%; height: auto; display: block; object-fit: cover; transition: transform 0.5s ease; }
+.hero-img:hover img { transform: scale(1.02); }
+.bento { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; padding: 4rem 5% 8rem 5%; max-width: 1400px; margin: 0 auto; }
+.card { background: var(--surface); padding: 3rem; border-radius: 24px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.02); border: 1px solid rgba(0,0,0,0.05); transition: transform 0.3s ease, box-shadow 0.3s ease; }
+.card:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.05); }
+.card h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 1rem; color: var(--text); }
+.card p { color: var(--text-muted); line-height: 1.6; font-size: 0.95rem; }
+@media (max-width: 900px) { .hero { grid-template-columns: 1fr; text-align: center; } .hero-text p { margin: 0 auto 2.5rem auto; } }
+</style>
+</head>
+<body>
+<nav>
+    <div class="logo">Care<span>Trust</span></div>
+    <div><button class="btn" style="background:var(--text); box-shadow:none;">ご相談はこちら</button></div>
+</nav>
+<section class="hero">
+    <div class="hero-text">
+        <h1>次世代の<br>医療体験を。</h1>
+        <p>私たちは、AI技術と温かいケアを融合させ、患者様一人ひとりに寄り添う革新的な医療インフラを提供します。</p>
+        <button class="btn">サービスを見る</button>
+    </div>
+    <div class="hero-img">
+        <img src="hero.png" alt="Medical Facility">
+    </div>
+</section>
+<section class="bento">
+    <div class="card">
+        <h3>高度な医療機器</h3>
+        <p>世界最高水準の精密な検査機器を導入し、早期発見と正確な診断を実現します。</p>
+    </div>
+    <div class="card">
+        <h3>データ連携システム</h3>
+        <p>電子カルテとAIを連携させ、過去の膨大なデータから最適な治療方針を導き出します。</p>
+    </div>
+    <div class="card">
+        <h3>24時間サポート</h3>
+        <p>患者様の不安を取り除くため、専用アプリを通じて24時間体制のオンライン診療を提供します。</p>
+    </div>
+</section>
+</body>
+</html>
