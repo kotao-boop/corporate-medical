@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact | CareTrust</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+:root { --bg: #f8fafc; --text: #0f172a; --text-muted: #64748b; --primary: #3b82f6; --surface: #ffffff; }
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
+body { background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+nav { display: flex; justify-content: space-between; padding: 1.5rem 5%; background: rgba(255,255,255,0.7); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(0,0,0,0.05); align-items: center; }
+.logo { font-size: 1.5rem; font-weight: 600; letter-spacing: -0.04em; text-decoration: none; color: var(--text); }
+.logo span { color: var(--primary); }
+.nav-links { display: flex; gap: 2rem; align-items: center; }
+.nav-links a { text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.95rem; transition: color 0.2s; }
+.nav-links a:hover { color: var(--primary); }
+@media (max-width: 900px) { .nav-links { display: none; } }
+.btn { padding: 1rem 2rem; background: var(--primary); color: white; border: none; border-radius: 99px; font-weight: 500; font-size: 1rem; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
+.page-header { padding: 8rem 5% 4rem; text-align: center; max-width: 800px; margin: 0 auto; }
+.page-header h1 { font-size: 3.5rem; font-weight: 600; letter-spacing: -0.04em; margin-bottom: 1.5rem; }
+.page-header p { font-size: 1.25rem; color: var(--text-muted); line-height: 1.6; }
+.contact-container { max-width: 600px; margin: 0 auto 8rem; background: var(--surface); padding: 3rem; border-radius: 24px; box-shadow: 0 10px 40px rgba(0,0,0,0.04); border: 1px solid rgba(0,0,0,0.05); }
+.form-group { margin-bottom: 1.5rem; }
+.form-group label { display: block; margin-bottom: 0.5rem; font-weight: 500; font-size: 0.95rem; }
+.form-control { width: 100%; padding: 1rem; border: 1px solid #e2e8f0; border-radius: 12px; font-size: 1rem; font-family: inherit; transition: all 0.2s; background: #f1f5f9; }
+.form-control:focus { outline: none; border-color: var(--primary); background: white; box-shadow: 0 0 0 4px rgba(59,130,246,0.1); }
+textarea.form-control { resize: vertical; min-height: 150px; }
+</style>
+</head>
+<body>
+<nav>
+    <a href="index.html" class="logo">Care<span>Trust</span></a>
+    <div class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="about.html">About Us</a>
+        <a href="services.html">Services</a>
+        <a href="contact.html">Contact</a>
+    </div>
+    <div><a href="contact.html" style="text-decoration:none;"><button class="btn" style="background:var(--text); box-shadow:none;">ご相談はこちら</button></a></div>
+</nav>
+
+<div class="page-header">
+    <h1>Contact Us.</h1>
+    <p>サービスに関するご質問や導入のご相談は、以下のフォームよりお気軽にお問い合わせください。</p>
+</div>
+
+<div class="contact-container">
+    <form onsubmit="event.preventDefault(); alert('お問い合わせを受け付けました。（デモ）');">
+        <div class="form-group">
+            <label for="name">お名前</label>
+            <input type="text" id="name" class="form-control" placeholder="山田 太郎" required>
+        </div>
+        <div class="form-group">
+            <label for="email">メールアドレス</label>
+            <input type="email" id="email" class="form-control" placeholder="yamada@example.com" required>
+        </div>
+        <div class="form-group">
+            <label for="subject">ご用件</label>
+            <select id="subject" class="form-control">
+                <option>サービス導入について</option>
+                <option>資料請求</option>
+                <option>その他のお問い合わせ</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="message">お問い合わせ内容</label>
+            <textarea id="message" class="form-control" placeholder="詳細をご記入ください" required></textarea>
+        </div>
+        <button type="submit" class="btn" style="width: 100%;">送信する</button>
+    </form>
+</div>
+</body>
+</html>
