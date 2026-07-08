@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="ja">
 <head>
 <meta charset="UTF-8">
@@ -8,14 +8,14 @@
 <style>
 :root { --bg: #f8fafc; --text: #0f172a; --text-muted: #64748b; --primary: #3b82f6; --surface: #ffffff; }
 * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Inter', sans-serif; }
-body { background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
+body { margin: 0; padding: 0; background: var(--bg); color: var(--text); -webkit-font-smoothing: antialiased; overflow-x: hidden; }
 nav { display: flex; justify-content: space-between; padding: 1.5rem 5%; background: rgba(255,255,255,0.7); backdrop-filter: blur(20px); -webkit-backdrop-filter: blur(20px); position: sticky; top: 0; z-index: 100; border-bottom: 1px solid rgba(0,0,0,0.05); align-items: center; }
 .logo { font-size: 1.5rem; font-weight: 600; letter-spacing: -0.04em; text-decoration: none; color: var(--text); }
 .logo span { color: var(--primary); }
 .nav-links { display: flex; gap: 2rem; align-items: center; }
 .nav-links a { text-decoration: none; color: var(--text); font-weight: 500; font-size: 0.95rem; transition: color 0.2s; }
 .nav-links a:hover { color: var(--primary); }
-@media (max-width: 900px) { .nav-links { display: none; } }
+@media (max-width: 900px) { nav, .nav { flex-direction: column !important; gap: 1rem; padding: 1rem !important; } .nav-links { display: flex !important; gap: 1rem; flex-wrap: wrap; justify-content: center; } .menu-btn { display: none !important; } }
 .btn { padding: 1rem 2rem; background: var(--primary); color: white; border: none; border-radius: 99px; font-weight: 500; font-size: 1rem; cursor: pointer; transition: transform 0.2s, box-shadow 0.2s; }
 .page-header { padding: 8rem 5% 4rem; text-align: center; max-width: 800px; margin: 0 auto; }
 .page-header h1 { font-size: 3.5rem; font-weight: 600; letter-spacing: -0.04em; margin-bottom: 1.5rem; }
@@ -40,9 +40,13 @@ nav { display: flex; justify-content: space-between; padding: 1.5rem 5%; backgro
     <div><a href="contact.html" style="text-decoration:none;"><button class="btn" style="background:var(--text); box-shadow:none;">ご相談はこちら</button></a></div>
 </nav>
 
-<div class="page-header">
-    <h1>Our Mission.</h1>
-    <p>すべての人に、最新かつ温かい医療体験を。テクノロジーの力で医療の壁を取り払います。</p>
+<div class="page-header" style="position:relative; overflow:hidden; color:white; padding: 12rem 5% 6rem; margin-top:-100px;">
+    <div style="position:absolute; top:0; left:0; width:100%; height:100%; background:url('about-bg.png') center/cover; z-index:-2;"></div>
+    <div style="position:absolute; top:0; left:0; width:100%; height:100%; background:linear-gradient(to bottom, rgba(0,0,0,0.7), rgba(0,0,0,0.3)); z-index:-1;"></div>
+    <div style="position:relative; z-index:1; max-width:800px; margin:0 auto;">
+        <h1 style="color:white; margin-bottom:1.5rem;">Our Mission.</h1>
+        <p>すべての人に、最新かつ温かい医療体験を。テクノロジーの力で医療の壁を取り払います。</p>
+    </div>
 </div>
 
 <div class="content-section">
@@ -67,3 +71,5 @@ nav { display: flex; justify-content: space-between; padding: 1.5rem 5%; backgro
 </div>
 </body>
 </html>
+
+
